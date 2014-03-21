@@ -16,8 +16,14 @@ we will implement our own memory allocator.
 In reality, the SQLite databese that comes with Android will take care of the memory management.
 ----------
 We will have the following operations:
-- Create, Delete, Modify, Update
+- Create, Delete, Modify 
     ***********************************************************/
+  /* TODO: Implement the Modify operation
+           Introduce the new names in alphabetical order
+           Macro FOR_EACH
+           Other improvements
+  */
+
     initialize_memory();
     create_element("Sam Hicks", "76367565213");
     create_element("Von Newman", "71267565277");
@@ -46,7 +52,7 @@ void create_element(const char* name, const char* number) {
         fprintf(stderr, "Unable to allocate memory for new element\n");
         exit(-1);
     }
-    global_id++;  // printf("\tglobal_id equals %d\n", global_id);
+    global_id++;  
     new_element->id = global_id;
     strcpy(new_element->name, name);
     memcpy(new_element->phone_number, number, NUM_DIGITS);
@@ -114,10 +120,6 @@ void print_list(struct element* elem2) {
         temp2 = temp2->next_element;
     }
 }
-
-
-
-
 
 
 

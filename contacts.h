@@ -16,7 +16,7 @@ struct element {
 }; 
 struct element* head;
 uint8_t global_id;
-struct element elements_pool[MAX_ELEMENTS];
+struct element elements_pool[MAX_ELEMENTS];  // not used
 void initialize_memory();
 void create_element(const char* string, const char* number);
 void delete_element(const char* name);
